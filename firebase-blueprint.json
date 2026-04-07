@@ -1,0 +1,23 @@
+{
+  "entities": {
+    "Registration": {
+      "title": "Registration",
+      "description": "A participant registration for the academy challenge",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique ID for the registration" },
+        "firstName": { "type": "string", "description": "First name of the participant" },
+        "lastName": { "type": "string", "description": "Last name of the participant" },
+        "fatherName": { "type": "string", "description": "Father's name of the participant" },
+        "timestamp": { "type": "number", "description": "Time of registration in milliseconds" }
+      },
+      "required": ["firstName", "lastName", "fatherName", "timestamp"]
+    }
+  },
+  "firestore": {
+    "/registrations/{registrationId}": {
+      "schema": "Registration",
+      "description": "Collection of all participant registrations"
+    }
+  }
+}

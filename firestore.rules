@@ -1,0 +1,37 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    //
+    // Collection: registrations
+    // Document ID: auto-generated
+    // Fields:
+    //   - firstName: string (required)
+    //   - lastName: string (required)
+    //   - fatherName: string (required)
+    //   - timestamp: number (required)
+    //
+    // ===============================================================
+
+    match /registrations/{registrationId} {
+      // Allow anyone to create a registration
+      allow create: if isValidRegistration(request.resource.data);
+
+      // Allow anyone to read registrations (needed for the admin panel)
+      // In a production app, this should be restricted to admins
+      allow read: if true;
+
+      // Allow deletion only if the user is authorized (for now, anyone for testing)
+      allow delete: if true;
+    }
+
+    function isValidRegistration(data) {
+      return data.firstName is string && data.firstName.size() > 0 && data.firstName.size() < 100 &&
+             data.lastName is string && data.lastName.size() > 0 && data.lastName.size() < 100 &&
+             data.fatherName is string && data.fatherName.size() > 0 && data.fatherName.size() < 100 &&
+             data.timestamp is number;
+    }
+  }
+}
