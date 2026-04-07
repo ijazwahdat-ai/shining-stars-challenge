@@ -74,7 +74,7 @@ const AdNotification = () => {
       setTimeout(() => setIsVisible(false), 8000);
       // Cycle to next ad
       setCurrentAd((prev) => (prev + 1) % COURSE_ADS.length);
-    }, 30000); // Every 30 seconds
+    }, 3000); // Every 30 seconds
 
     // Show first ad after 5 seconds
     const firstTimeout = setTimeout(() => {
@@ -303,12 +303,12 @@ const LandingPage = () => {
 
         <p className="text-white/50 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-light mb-10">
           فرصتی استثنایی برای یادگیری و درخشش با
-          <span className="text-gold font-bold"> ۵۰ سیت پکیج های درسی معتبر با سرتیفیکت از کمپنی خارجی </span>.
+          <span className="text-gold font-bold"> ۵۰ سیت پکیج های درسی معتبر با سرتیفیکت از کمپنی خارجی. </span>
           با ثبت‌نام در این چالش، نام و تخلص شما در
           <span className="text-white font-medium"> نظرسنجی </span>
           کانال واتس‌آپ قرار می‌گیرد. هر کسی که بیشترین
           <span className="text-white font-medium"> رای </span>
-          را کسب کند، برنده پکیج آموزشی رایگان و سرتیفیکیت معتبر بین‌المللی خواهد شد.
+          را کسب کند، برنده پکیج آموزشی رایگان و سرتیفیکیت معتبر بین‌المللی خواهد شد
         </p>
 
         <motion.a
