@@ -50,8 +50,8 @@ const handleFirestoreError = (error: unknown, operationType: OperationType, path
 };
 
 // --- Constants ---
-const ACADEMY_WHATSAPP = "+93700000000"; // Replace with actual number
-const ACADEMY_WEBSITE = "https://your-academy-website.com"; // Replace with actual website
+const ACADEMY_WHATSAPP = "+93704795370"; // Replace with actual number
+const ACADEMY_WEBSITE = "https://sites.google.com/view/ssoacl/home"; // Replace with actual website
 
 const COURSE_ADS = [
   { title: "ترجمه و تفسیر قرآن کریم", desc: "ثبت‌نام دوره‌های جدید با اساتید مجرب آغاز شد." },
@@ -395,7 +395,7 @@ const LandingPage = () => {
                     نام و تخلص شما به لیست نظرسنجی در کانال واتس‌آپ اضافه خواهد شد. برای برنده شدن، رای جمع کنید!
                   </p>
                   <a
-                    href="https://whatsapp.com/channel/your-channel-link"
+                    href="https://whatsapp.com/channel/0029VbBid7wL2AU1BhgI6r33"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block px-6 py-3 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all"
