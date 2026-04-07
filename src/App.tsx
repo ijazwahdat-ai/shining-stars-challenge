@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
-import { Star, Send, CheckCircle2, Users, Trophy, GraduationCap, ChevronRight, Bell, X } from "lucide-react";
+import { Star, Send, CheckCircle2, Users, Trophy, GraduationCap, ChevronRight, Bell, X, Cpu, MessageCircle } from "lucide-react";
 import { db } from "./firebase";
 import {
   collection,
@@ -50,8 +50,8 @@ const handleFirestoreError = (error: unknown, operationType: OperationType, path
 };
 
 // --- Constants ---
-const ACADEMY_WHATSAPP = "+93700000000"; // Replace with actual number
-const ACADEMY_WEBSITE = "https://your-academy-website.com"; // Replace with actual website
+const ACADEMY_WHATSAPP = "+93704795370";
+const ACADEMY_WEBSITE = "https://sites.google.com/view/ssoacl/home";
 
 const COURSE_ADS = [
   { title: "ترجمه و تفسیر قرآن کریم", desc: "ثبت‌نام دوره‌های جدید با اساتید مجرب آغاز شد." },
@@ -134,18 +134,18 @@ const AdNotification = () => {
 };
 
 const Footer = () => (
-  <footer className="relative z-10 py-20 border-t border-white/5 bg-midnight/60 backdrop-blur-xl" dir="rtl">
+  <footer className="relative z-10 py-20 border-t border-white/5 bg-midnight/80 backdrop-blur-2xl" dir="rtl">
     <div className="max-w-7xl mx-auto px-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         {/* Branding & Copyright */}
         <div className="text-center md:text-right space-y-6">
           <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-gold to-gold-light rounded-xl flex items-center justify-center text-midnight shadow-lg shadow-gold/20">
-              <Star size={20} className="fill-midnight" />
+            <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 via-blue-600 to-purple-600 rounded-xl flex items-center justify-center text-white shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-transform hover:rotate-12 duration-500">
+              <Cpu size={24} className="animate-pulse" />
             </div>
             <div className="text-right">
-              <h3 className="text-white font-display font-bold text-lg tracking-tight leading-none">Wahdat Brain Technology</h3>
-              <span className="text-[10px] text-gold/50 uppercase tracking-[0.3em]">Innovation Hub</span>
+              <h3 className="text-white font-display font-bold text-xl tracking-tight leading-none">Wahdat Brain Technology</h3>
+              <span className="text-[10px] bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500 uppercase tracking-[0.3em] font-bold">AI & Innovation Hub</span>
             </div>
           </div>
 
@@ -162,25 +162,26 @@ const Footer = () => (
         {/* Contact & Social */}
         <div className="flex flex-col items-center md:items-end space-y-6">
           <div className="space-y-1 text-center md:text-right">
-            <p className="text-gold font-display text-[10px] uppercase tracking-[0.3em] font-bold">Official Contact</p>
-            <p className="text-white/40 text-xs">ارتباط مستقیم با واحد مدیریت آکادمی</p>
+            <p className="text-gold font-display text-[10px] uppercase tracking-[0.3em] font-bold">Official Academy Contact</p>
+            <p className="text-white/40 text-xs">ارتباط مستقیم و سریع در واتس‌آپ</p>
           </div>
 
           <a
             href={`https://wa.me/${ACADEMY_WHATSAPP.replace(/[^0-9]/g, '')}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex items-center gap-6 px-10 py-5 rounded-2xl bg-white/[0.02] border border-white/10 text-gold hover:text-midnight transition-all duration-500 overflow-hidden"
+            className="group relative inline-flex items-center gap-6 px-10 py-5 rounded-2xl bg-green-500/10 border border-green-500/20 text-green-400 hover:text-white transition-all duration-500 overflow-hidden"
             dir="ltr"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-gold to-gold-light translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-            <div className="relative z-10 flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-gold/10 group-hover:bg-midnight/10 flex items-center justify-center transition-colors">
-                <Send size={16} className="rotate-[-45deg]" />
+            <div className="absolute inset-0 bg-green-600 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+            <div className="relative z-10 flex items-center gap-4">
+              <div className="w-10 h-10 rounded-full bg-green-500/20 group-hover:bg-white/20 flex items-center justify-center transition-colors">
+                <MessageCircle size={20} />
               </div>
               <span className="font-mono text-2xl tracking-tighter font-black">{ACADEMY_WHATSAPP}</span>
             </div>
           </a>
+          <p className="text-white/20 text-[10px] italic">برای ثبت‌نام و مشاوره کلیک کنید</p>
         </div>
       </div>
 
@@ -194,7 +195,7 @@ const Footer = () => (
         <div className="flex items-center gap-4">
           <div className="h-px w-8 bg-white/10"></div>
           <div className="text-[10px] text-white/20 font-display tracking-[0.4em] uppercase">
-            Global Standards • Local Expertise
+            GLOBAL STANDARDS • LOCAL EXPERTISE
           </div>
         </div>
       </div>
