@@ -134,70 +134,71 @@ const AdNotification = () => {
 };
 
 const Footer = () => (
-  <footer className="relative z-10 py-20 border-t border-white/5 bg-midnight/80 backdrop-blur-2xl" dir="rtl">
+  <footer className="relative z-10 py-24 border-t border-white/5 bg-midnight/90 backdrop-blur-3xl" dir="rtl">
     <div className="max-w-7xl mx-auto px-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-        {/* Branding & Copyright */}
-        <div className="text-center md:text-right space-y-6">
-          <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
-            <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 via-blue-600 to-purple-600 rounded-xl flex items-center justify-center text-white shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-transform hover:rotate-12 duration-500">
-              <Cpu size={24} className="animate-pulse" />
-            </div>
-            <div className="text-right">
-              <h3 className="text-white font-display font-bold text-xl tracking-tight leading-none">Wahdat Brain Technology</h3>
-              <span className="text-[10px] bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500 uppercase tracking-[0.3em] font-bold">AI & Innovation Hub</span>
-            </div>
-          </div>
+      <div className="flex flex-col items-center space-y-20">
 
-          <div className="space-y-2" dir="ltr">
-            <p className="text-white/70 text-sm font-medium">
-              Designed, Developed & Managed by <span className="text-gold font-bold">Wahdat Brain Technology (WBT)</span>
-            </p>
-            <p className="text-white/30 text-[11px] tracking-widest uppercase">
-              @ 2026 Wahdat Brain Technology (WBT). All Rights Reserved.
-            </p>
-          </div>
-        </div>
-
-        {/* Contact & Social */}
-        <div className="flex flex-col items-center md:items-end space-y-6">
-          <div className="space-y-1 text-center md:text-right">
-            <p className="text-gold font-display text-[10px] uppercase tracking-[0.3em] font-bold">Official Academy Contact</p>
-            <p className="text-white/40 text-xs">ارتباط مستقیم و سریع در واتس‌آپ</p>
+        {/* 1. Primary Contact (Academy) */}
+        <div className="flex flex-col items-center space-y-8 w-full max-w-2xl">
+          <div className="text-center space-y-2">
+            <h4 className="text-gold font-display text-xs uppercase tracking-[0.4em] font-black">Official Academy Contact</h4>
+            <p className="text-white/40 text-sm">ارتباط مستقیم با واحد ثبت‌نام و مشاوره آکادمی</p>
           </div>
 
           <a
             href={`https://wa.me/${ACADEMY_WHATSAPP.replace(/[^0-9]/g, '')}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex items-center gap-6 px-10 py-5 rounded-2xl bg-green-500/10 border border-green-500/20 text-green-400 hover:text-white transition-all duration-500 overflow-hidden"
+            className="group relative w-full inline-flex items-center justify-center gap-8 px-12 py-6 rounded-3xl bg-green-500/5 border border-green-500/20 text-green-400 hover:text-white transition-all duration-700 overflow-hidden shadow-[0_0_50px_rgba(34,197,94,0.05)]"
             dir="ltr"
           >
-            <div className="absolute inset-0 bg-green-600 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-            <div className="relative z-10 flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-green-500/20 group-hover:bg-white/20 flex items-center justify-center transition-colors">
-                <MessageCircle size={20} />
+            <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-500 translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-out"></div>
+            <div className="relative z-10 flex items-center gap-6">
+              <div className="w-12 h-12 rounded-2xl bg-green-500/20 group-hover:bg-white/20 flex items-center justify-center transition-all duration-500 group-hover:rotate-[360deg]">
+                <MessageCircle size={28} />
               </div>
-              <span className="font-mono text-2xl tracking-tighter font-black">{ACADEMY_WHATSAPP}</span>
+              <span className="font-mono text-3xl md:text-4xl tracking-tighter font-black">{ACADEMY_WHATSAPP}</span>
             </div>
           </a>
-          <p className="text-white/20 text-[10px] italic">برای ثبت‌نام و مشاوره کلیک کنید</p>
         </div>
-      </div>
 
-      {/* Bottom Bar */}
-      <div className="mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-        <div className="flex gap-8 text-[10px] text-white/20 uppercase tracking-[0.2em] font-display">
-          <a href="#" className="hover:text-gold transition-colors">Privacy Policy</a>
-          <a href="#" className="hover:text-gold transition-colors">Terms of Service</a>
-          <a href="#" className="hover:text-gold transition-colors">Cookie Policy</a>
-        </div>
-        <div className="flex items-center gap-4">
-          <div className="h-px w-8 bg-white/10"></div>
-          <div className="text-[10px] text-white/20 font-display tracking-[0.4em] uppercase">
-            GLOBAL STANDARDS • LOCAL EXPERTISE
+        {/* 2. Developer Branding (WBT) */}
+        <div className="flex flex-col items-center space-y-8 pt-12 border-t border-white/5 w-full">
+          <div className="flex flex-col items-center gap-4">
+            <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 via-blue-600 to-purple-600 rounded-2xl flex items-center justify-center text-white shadow-[0_0_30px_rgba(6,182,212,0.3)] transition-all hover:scale-110 hover:rotate-6 duration-500">
+              <Cpu size={32} className="animate-pulse" />
+            </div>
+            <div className="text-center">
+              <h3 className="text-white font-display font-black text-2xl tracking-tight leading-none mb-1">Wahdat Brain Technology</h3>
+              <span className="text-[10px] bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500 uppercase tracking-[0.5em] font-black">AI & Innovation Hub</span>
+            </div>
+          </div>
+
+          <div className="text-center space-y-3" dir="ltr">
+            <p className="text-white/60 text-sm font-medium tracking-wide">
+              Designed, Developed & Managed by <span className="text-gold font-bold">Wahdat Brain Technology (WBT)</span>
+            </p>
+            <p className="text-white/20 text-[11px] tracking-[0.3em] uppercase font-display">
+              @ 2026 Wahdat Brain Technology (WBT). All Rights Reserved.
+            </p>
           </div>
         </div>
+
+        {/* 3. Bottom Legal Bar */}
+        <div className="w-full pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+          <div className="flex gap-10 text-[10px] text-white/20 uppercase tracking-[0.2em] font-display">
+            <a href="#" className="hover:text-gold transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-gold transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-gold transition-colors">Cookie Policy</a>
+          </div>
+          <div className="flex items-center gap-6">
+            <div className="h-px w-12 bg-white/10"></div>
+            <div className="text-[10px] text-white/20 font-display tracking-[0.5em] uppercase">
+              Global Standards • Local Expertise
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </footer>
