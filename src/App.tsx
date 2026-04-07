@@ -50,8 +50,8 @@ const handleFirestoreError = (error: unknown, operationType: OperationType, path
 };
 
 // --- Constants ---
-const ACADEMY_WHATSAPP = "+93704795370"; // Replace with actual number
-const ACADEMY_WEBSITE = "https://sites.google.com/view/ssoacl/home"; // Replace with actual website
+const ACADEMY_WHATSAPP = "+93700000000"; // Replace with actual number
+const ACADEMY_WEBSITE = "https://your-academy-website.com"; // Replace with actual website
 
 const COURSE_ADS = [
   { title: "ترجمه و تفسیر قرآن کریم", desc: "ثبت‌نام دوره‌های جدید با اساتید مجرب آغاز شد." },
@@ -134,50 +134,68 @@ const AdNotification = () => {
 };
 
 const Footer = () => (
-  <footer className="relative z-10 py-16 border-t border-white/5 bg-midnight/40 backdrop-blur-md" dir="rtl">
+  <footer className="relative z-10 py-20 border-t border-white/5 bg-midnight/60 backdrop-blur-xl" dir="rtl">
     <div className="max-w-7xl mx-auto px-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         {/* Branding & Copyright */}
-        <div className="text-center md:text-right space-y-4">
-          <div className="flex items-center justify-center md:justify-start gap-3 mb-2">
-            <div className="w-8 h-8 bg-gold rounded-lg flex items-center justify-center text-midnight font-bold">W</div>
-            <span className="text-white font-display font-bold tracking-tight">Wahdat Brain Technology</span>
+        <div className="text-center md:text-right space-y-6">
+          <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
+            <div className="w-10 h-10 bg-gradient-to-br from-gold to-gold-light rounded-xl flex items-center justify-center text-midnight shadow-lg shadow-gold/20">
+              <Star size={20} className="fill-midnight" />
+            </div>
+            <div className="text-right">
+              <h3 className="text-white font-display font-bold text-lg tracking-tight leading-none">Wahdat Brain Technology</h3>
+              <span className="text-[10px] text-gold/50 uppercase tracking-[0.3em]">Innovation Hub</span>
+            </div>
           </div>
-          <p className="text-white/50 text-sm font-medium leading-relaxed max-w-md">
-            Designed, Developed & Managed by <span className="text-gold font-semibold">Wahdat Brain Technology (WBT)</span>
-          </p>
-          <p className="text-white/20 text-[11px] tracking-widest uppercase">
-            © 2026 Wahdat Brain Technology (WBT). All Rights Reserved.
-          </p>
+
+          <div className="space-y-2" dir="ltr">
+            <p className="text-white/70 text-sm font-medium">
+              Designed, Developed & Managed by <span className="text-gold font-bold">Wahdat Brain Technology (WBT)</span>
+            </p>
+            <p className="text-white/30 text-[11px] tracking-widest uppercase">
+              @ 2026 Wahdat Brain Technology (WBT). All Rights Reserved.
+            </p>
+          </div>
         </div>
 
         {/* Contact & Social */}
-        <div className="flex flex-col items-center md:items-end space-y-4">
-          <p className="text-white/40 text-[11px] uppercase tracking-[0.2em] font-bold">Contact Official Academy</p>
+        <div className="flex flex-col items-center md:items-end space-y-6">
+          <div className="space-y-1 text-center md:text-right">
+            <p className="text-gold font-display text-[10px] uppercase tracking-[0.3em] font-bold">Official Contact</p>
+            <p className="text-white/40 text-xs">ارتباط مستقیم با واحد مدیریت آکادمی</p>
+          </div>
+
           <a
             href={`https://wa.me/${ACADEMY_WHATSAPP.replace(/[^0-9]/g, '')}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex items-center gap-4 px-8 py-4 rounded-2xl bg-white/[0.03] border border-white/10 text-gold hover:text-midnight hover:bg-gold transition-all duration-500 overflow-hidden"
+            className="group relative inline-flex items-center gap-6 px-10 py-5 rounded-2xl bg-white/[0.02] border border-white/10 text-gold hover:text-midnight transition-all duration-500 overflow-hidden"
+            dir="ltr"
           >
-            <div className="absolute inset-0 bg-gold translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-            <span className="relative z-10 font-mono text-xl tracking-tighter font-bold">{ACADEMY_WHATSAPP}</span>
-            <div className="relative z-10 w-8 h-8 rounded-full bg-gold/20 group-hover:bg-midnight/20 flex items-center justify-center transition-colors">
-              <Send size={16} className="rotate-[-45deg]" />
+            <div className="absolute inset-0 bg-gradient-to-r from-gold to-gold-light translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+            <div className="relative z-10 flex items-center gap-3">
+              <div className="w-8 h-8 rounded-full bg-gold/10 group-hover:bg-midnight/10 flex items-center justify-center transition-colors">
+                <Send size={16} className="rotate-[-45deg]" />
+              </div>
+              <span className="font-mono text-2xl tracking-tighter font-black">{ACADEMY_WHATSAPP}</span>
             </div>
           </a>
-          <p className="text-white/20 text-[10px]">ارتباط مستقیم با واحد ثبت‌نام در واتس‌آپ</p>
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-        <div className="flex gap-6 text-[10px] text-white/30 uppercase tracking-widest">
+      <div className="mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="flex gap-8 text-[10px] text-white/20 uppercase tracking-[0.2em] font-display">
           <a href="#" className="hover:text-gold transition-colors">Privacy Policy</a>
           <a href="#" className="hover:text-gold transition-colors">Terms of Service</a>
+          <a href="#" className="hover:text-gold transition-colors">Cookie Policy</a>
         </div>
-        <div className="text-[10px] text-white/20 font-display">
-          GLOBAL STANDARDS • LOCAL EXPERTISE
+        <div className="flex items-center gap-4">
+          <div className="h-px w-8 bg-white/10"></div>
+          <div className="text-[10px] text-white/20 font-display tracking-[0.4em] uppercase">
+            Global Standards • Local Expertise
+          </div>
         </div>
       </div>
     </div>
@@ -395,7 +413,7 @@ const LandingPage = () => {
                     نام و تخلص شما به لیست نظرسنجی در کانال واتس‌آپ اضافه خواهد شد. برای برنده شدن، رای جمع کنید!
                   </p>
                   <a
-                    href="https://whatsapp.com/channel/0029VbBid7wL2AU1BhgI6r33"
+                    href="https://whatsapp.com/channel/your-channel-link"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block px-6 py-3 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all"
