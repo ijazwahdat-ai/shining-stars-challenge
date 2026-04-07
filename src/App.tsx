@@ -298,7 +298,7 @@ const LandingPage = () => {
         <h1 className="font-serif text-5xl md:text-8xl font-black leading-[1] mb-8 tracking-tighter">
           به چالش بزرگ و شگفت انگیز <br />
           <span className="gold-gradient-text glow-gold italic">آکادمی ستاره‌های درخشان</span> <br />
-          خوش آمدید!
+          !خوش آمدید
         </h1>
 
         <p className="text-white/50 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-light mb-10">
@@ -312,7 +312,7 @@ const LandingPage = () => {
         </p>
 
         <motion.a
-          href="https://whatsapp.com/channel/your-channel-link" // Replace with actual link
+          href="https://whatsapp.com/channel/0029VbBid7wL2AU1BhgI6r33" // Replace with actual link
           target="_blank"
           rel="noopener noreferrer"
           initial={{ opacity: 0, scale: 0.9 }}
